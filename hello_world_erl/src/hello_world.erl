@@ -12,11 +12,12 @@
 %% API
 -export([say_hi/1]).
 
-say_hi([H]) ->
-    do_say_hi(H);
-say_hi([H | T]) ->
-    do_say_hi(H),
-    say_hi(T).
+say_hi(Str) when is_list(Str), is_integer(hd(Str)) ->
+    do_say_hi(Str);
+say_hi([H])  ->
+    say_hi(H);
+say_hi([_H | _T] = Names ) ->
+    [ say_hi(Str) || Str <- Names].
 do_say_hi(Name) ->
     "Hello " ++ Name ++ "!!!".
 
