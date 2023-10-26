@@ -15,6 +15,7 @@ main(Args) ->
     io:format("~s~n", [hello_world:say_hi(Args)]).
 
 start(_StartType, _StartArg) ->
+    {ok, _} = application:ensure_all_started(wamp_service, permanent),
     hello_world_sup:start_link().
 
 stop(_State) ->
