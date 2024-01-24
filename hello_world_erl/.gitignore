@@ -1,3 +1,7 @@
+ebin
+log
+logs
+.idea
 .rebar3
 _build
 _checkouts
@@ -9,12 +13,11 @@ _vendor
 *.swp
 *.swo
 .erlang.cookie
-ebin
-log
-erl_crash.dump
+*.dump
 .rebar
-logs
-.idea
 *.iml
-rebar3.crashdump
-*~
+*.crashdump
+
+# Bondy Config
+/bondy/etc/generated/
+/bondy/etc/security_config.json

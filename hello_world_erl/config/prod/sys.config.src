@@ -7,10 +7,10 @@
     {wamp_service, [
         {callee_dispatcher, [
             %% wamp opts
-            {hostname, "localhost"},
-            {port, 18082},
-            {realm, <<"com.leapsight.bondy">>},
-            {encoding, erlbin},
+            {hostname, "${WAMP_HOST}"},
+            {port, ${WAMP_PORT}},
+            {realm, <<"${WAMP_REALM}">>},
+            {encoding, ${WAMP_ENCODING} },
             {reconnect, true},
             {retries, infinity},
             {callbacks, [
@@ -19,10 +19,10 @@
         ]},
         {caller_service, [
             %% wamp opts
-            {hostname, "localhost"},
-            {port, 18082},
-            {realm, <<"com.leapsight.bondy">>},
-            {encoding, erlbin},
+            {hostname, "${WAMP_HOST}"},
+            {port, ${WAMP_PORT}},
+            {realm, <<"${WAMP_REALM}">>},
+            {encoding, ${WAMP_ENCODING} },
             {reconnect, true},
             {retries, infinity}
         ]}

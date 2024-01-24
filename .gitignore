@@ -42,3 +42,6 @@ replay_pid*
 *.iws
 *.iml
 *.ipr
+
+node_modules
+.DS_Store
